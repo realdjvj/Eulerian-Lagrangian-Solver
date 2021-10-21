@@ -6,7 +6,10 @@ import sys
 import time
 import matplotlib
 import matplotlib.pyplot as plt
-plt.style.use('tex')
+try:
+    plt.style.use('tex')
+except:
+    pass
 from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter, MaxNLocator
 
 def plot_streamlines(U,V,N,i):
